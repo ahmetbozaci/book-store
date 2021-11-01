@@ -1,5 +1,4 @@
-/** @format */
-
+import './App.scss';
 import Navbar from './components/Navbar';
 
 function App() {

@@ -1,0 +1,31 @@
+/** @format */
+
+$blue: #363a3f;
+$ubuntu-font: 'Ubuntu', 'Arial', 'Helvetica', sans-serif;
+$nunito-font: 'Nunito', 'Arial', 'Helvetica', sans-serif;
+
+h1 {
+  font: $ubuntu-font;
+  color: $blue;
+}
+
+a {
+  font: $nunito-font;
+  padding: 6px;
+}
+
+.navbar {
+  font: $ubuntu-font;
+  color: $blue;
+  li {
+    margin-left: 1rem;
+    a {
+      padding: 5px;
+      font-size: 1.5rem;
+      text-decoration: none;
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+}

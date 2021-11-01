@@ -7,7 +7,7 @@ import Categories from './Categories';
 
 const Navbar = () => (
   <Router>
-    <nav>
+    <nav className="navbar">
       <ul>
         <li>
           Bookstore CMS
