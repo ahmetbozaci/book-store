@@ -3,7 +3,15 @@
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
-const initialState = [];
+const initialState = [
+  {
+    id: 1,
+    name: 'The Hunger Games',
+    writer: 'Suzanne Collins',
+    category: 'Action',
+    completed: 'not completed',
+  },
+];
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
