@@ -16,9 +16,11 @@ a {
 .navbar {
   font: $ubuntu-font;
   color: $blue;
+
   li {
     margin-left: 1rem;
     font-size: 1.5rem;
+  
     a {
       text-decoration: none;
     }

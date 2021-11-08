@@ -3,10 +3,14 @@ import Buttons from './Buttons';
 
 const books = [
   {
-    id: 1, name: 'The Hunger Games', writer: 'Suzanne Collins', category: 'Action',
+    id: 1,
+    name: 'The Hunger Games',
+    writer: 'Suzanne Collins',
+    category: 'Action',
+    completed: 'not completed',
   },
   {
-    id: 2, name: 'Dune', writer: 'Frank Herbert', category: 'Science Fiction',
+    id: 2, name: 'Dune', writer: 'Frank Herbert', category: 'Science Fiction', completed: 'not completed',
   },
 ];
 const Books = () => (
@@ -20,6 +24,7 @@ const Books = () => (
           -
           {book.writer}
           -
+          {book.completed}
           <Buttons />
         </li>
       ))}
