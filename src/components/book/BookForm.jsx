@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { addBook, removeBook } from '../../redux/books/books';
 
 const BookForm = () => {
@@ -9,7 +10,7 @@ const BookForm = () => {
     e.preventDefault();
 
     const newBook = {
-      id: 1,
+      id: uuidv4(),
       title: 'title',
       author: 'author',
     };
