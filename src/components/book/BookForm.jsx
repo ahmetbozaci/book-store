@@ -1,17 +1,26 @@
 /* eslint-disable no-unused-vars */
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook, removeBook } from '../../redux/books/books';
+import { addBook } from '../../redux/books/books';
 
 const BookForm = () => {
   const dispatch = useDispatch();
 
+  // const onChange = (e) => {
+  // const newBook = {
+  //   id: uuidv4(),
+  //   title: e.target.value,
+  //   author: 'author',
+  // };
+  //   console.log(e.target.value);
+  //   return newBook;
+  // };
+
   const submitBookToStore = (e) => {
     e.preventDefault();
-
     const newBook = {
       id: uuidv4(),
-      title: 'title',
+      title: e.target.value,
       author: 'author',
     };
     dispatch(addBook(newBook));
@@ -26,7 +35,7 @@ const BookForm = () => {
           <option value="action">Action</option>
           <option value="action">Science Fiction</option>
         </select>
-        <button type="submit" onClick={submitBookToStore}>ADD BOOK</button>
+        <button onClick={submitBookToStore} type="submit">ADD BOOK</button>
       </form>
     </div>
   );

@@ -8,14 +8,11 @@ const BookList = () => {
   return (
     <ul>
       {books.map((book) => (
-        <li key={book.id}>
-          {book.category}
+        <li key={book.id} id={book.id}>
           -
-          {book.name}
+          {book.title}
           -
-          {book.writer}
-          -
-          {book.completed}
+          {book.author}
           <Buttons />
         </li>
       ))}

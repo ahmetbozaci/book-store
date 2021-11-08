@@ -1,15 +1,14 @@
 /** @format */
+import { v4 as uuidv4 } from 'uuid';
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
 const initialState = [
   {
-    id: 1,
-    name: 'The Hunger Games',
-    writer: 'Suzanne Collins',
-    category: 'Action',
-    completed: 'not completed',
+    id: uuidv4(),
+    title: 'The Hunger Games',
+    author: 'Suzanne Collins',
   },
 ];
 
@@ -18,7 +17,7 @@ const reducer = (state = initialState, action) => {
     case ADD_BOOK:
       return [...state, action.payload];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload.id);
+      return state.filter((book) => book.id !== action.id);
     default:
       return state;
   }
@@ -29,9 +28,9 @@ export const addBook = (payload) => ({
   payload,
 });
 
-export const removeBook = (payload) => ({
+export const removeBook = (id) => ({
   type: REMOVE_BOOK,
-  payload,
+  id,
 });
 
 export default reducer;
