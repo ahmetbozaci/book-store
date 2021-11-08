@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../../redux/books/books';
 
