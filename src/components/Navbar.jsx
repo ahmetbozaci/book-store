@@ -2,7 +2,7 @@ import {
   Link, BrowserRouter as Router, Switch, Route,
 } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
-import Books from './Books';
+import Books from './book/Books';
 import Categories from './Categories';
 
 const Navbar = () => (
