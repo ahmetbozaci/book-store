@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../../redux/books/books';
@@ -6,36 +5,31 @@ import { addBook } from '../../redux/books/books';
 const BookForm = () => {
   const dispatch = useDispatch();
 
-  // const onChange = (e) => {
-  // const newBook = {
-  //   id: uuidv4(),
-  //   title: e.target.value,
-  //   author: 'author',
-  // };
-  //   console.log(e.target.value);
-  //   return newBook;
-  // };
-
-  const submitBookToStore = (e) => {
+  const addBookToStore = (e) => {
     e.preventDefault();
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
     const newBook = {
       id: uuidv4(),
-      title: e.target.value,
-      author: 'author',
+      title,
+      author,
     };
     dispatch(addBook(newBook));
+    document.getElementById('title').value = '';
+    document.getElementById('author').value = '';
   };
 
   return (
     <div>
       <h3>ADD NEW BOOK</h3>
       <form action="">
-        <input type="text" placeholder="Book title" />
+        <input type="text" placeholder="Book title" id="title" />
+        <input type="text" placeholder="Book author" id="author" />
         <select>
           <option value="action">Action</option>
           <option value="action">Science Fiction</option>
         </select>
-        <button onClick={submitBookToStore} type="submit">ADD BOOK</button>
+        <button onClick={addBookToStore} type="submit">ADD BOOK</button>
       </form>
     </div>
   );

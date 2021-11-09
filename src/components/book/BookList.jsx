@@ -1,10 +1,9 @@
 /* eslint-disable no-unused-vars */
+import { useSelector } from 'react-redux';
 import Buttons from './Buttons';
-import store from '../../redux/configureStore';
 
-console.log(store.getState().booksReducer);
 const BookList = () => {
-  const books = store.getState().booksReducer;
+  const books = useSelector((state) => state.booksReducer);
   return (
     <ul>
       {books.map((book) => (
