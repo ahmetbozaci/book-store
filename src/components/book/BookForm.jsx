@@ -1,30 +1,35 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable no-unused-vars */
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
+import { useState } from 'react';
 import { addBook } from '../../redux/books/books';
 
 const BookForm = () => {
   const dispatch = useDispatch();
+  const [state, setState] = useState({ title: '', author: '' });
+
+  const handleChange = (e) => {
+    setState({ ...state, [e.target.name]: e.target.value });
+  };
 
   const addBookToStore = (e) => {
     e.preventDefault();
-    const title = document.getElementById('title').value;
-    const author = document.getElementById('author').value;
     const newBook = {
       id: uuidv4(),
-      title,
-      author,
+      title: state.title,
+      author: state.author,
     };
     dispatch(addBook(newBook));
-    document.getElementById('title').value = '';
-    document.getElementById('author').value = '';
+    setState({ title: '', author: '' });
   };
 
   return (
     <div>
       <h3>ADD NEW BOOK</h3>
       <form action="">
-        <input type="text" placeholder="Book title" id="title" />
-        <input type="text" placeholder="Book author" id="author" />
+        <input type="text" placeholder="Book title" onChange={handleChange} value={state.title} name="title" />
+        <input type="text" placeholder="Book author" onChange={handleChange} value={state.author} name="author" />
         <select>
           <option value="action">Action</option>
           <option value="action">Science Fiction</option>
