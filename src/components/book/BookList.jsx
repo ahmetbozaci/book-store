@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useSelector } from 'react-redux';
 import Buttons from './Buttons';
 
