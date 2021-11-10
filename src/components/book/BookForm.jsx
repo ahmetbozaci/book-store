@@ -1,7 +1,10 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/extensions */
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { addBook } from '../../redux/books/books';
+import { getBooksFromApi, addBookToApi, deleteBookFromApi } from '../API/API';
 
 const BookForm = () => {
   const dispatch = useDispatch();
@@ -10,6 +13,13 @@ const BookForm = () => {
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
+
+  useEffect(async () => {
+    const data = await getBooksFromApi();
+    console.log(data);
+    // addBookToApi();
+    // deleteBookFromApi('31231');
+  });
 
   const addBookToStore = (e) => {
     e.preventDefault();
