@@ -2,7 +2,7 @@ import { deleteBook, postBook } from '../API';
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
-const UPDATE = 'bookStore/books/updateBooks';
+const LOAD_BOOKS = 'bookStore/books/LOAD_BOOKS';
 
 const initialState = [];
 
@@ -17,7 +17,7 @@ const reducer = (state = initialState, action) => {
       const { [action.payload.id]: r, ...newState } = state;
       return newState;
     }
-    case UPDATE:
+    case LOAD_BOOKS:
       return action.payload;
     default:
       return state;
@@ -47,7 +47,7 @@ export const removeBookFromApi = (id) => async (dispatch) => {
 };
 
 const loadBooks = (apiState) => ({
-  type: UPDATE,
+  type: LOAD_BOOKS,
   payload: apiState,
 });
 
