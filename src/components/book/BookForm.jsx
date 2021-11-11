@@ -1,12 +1,7 @@
-/* eslint-disable import/named */
-/* eslint-disable no-unused-vars */
-/* eslint-disable import/extensions */
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { useState, useEffect } from 'react';
-import { addBook, addBookToApi } from '../../redux/books/books';
-
-import { getBooks, postBook, deleteBook } from '../../redux/API';
+import { useState } from 'react';
+import { addBookToApi } from '../../redux/books/books';
 
 const BookForm = () => {
   const dispatch = useDispatch();
@@ -25,12 +20,6 @@ const BookForm = () => {
     };
     dispatch(addBookToApi(newBook));
     setState({ title: '', category: '' });
-
-    // const test = async () => {
-    //   const data = await getBooks();
-    //   console.log(data);
-    // };
-    // test();
   };
 
   return (

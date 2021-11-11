@@ -1,11 +1,3 @@
-/**
- * /* eslint-disable no-unused-vars
- *
- * @format
- */
-
-/** @format */
-
 import { deleteBook, postBook } from '../API';
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
