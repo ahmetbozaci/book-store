@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../../redux/books/books';
+import { removeBookFromApi } from '../../redux/API';
 
 const Buttons = () => {
   const dispatch = useDispatch();
   const remove = (e) => {
-    dispatch(removeBook(e.target.parentNode.id));
+    dispatch(removeBookFromApi(e.target.parentNode.id));
   };
   return (
     <>

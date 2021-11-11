@@ -5,12 +5,9 @@ const BookList = () => {
   const books = useSelector((state) => state.booksReducer);
   return (
     <ul>
-      {books.map((book) => (
-        <li key={book.id} id={book.id}>
-          -
-          {book.title}
-          -
-          {book.author}
+      {Object.entries(books).map(([key, value]) => (
+        <li key={key} id={key}>
+          {value.map((item) => item.title)}
           <Buttons />
         </li>
       ))}
