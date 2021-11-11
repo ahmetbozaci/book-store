@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { removeBookFromApi } from '../../redux/books/books';
+import { removeBookFromApi } from '../../redux/API';
 
 const Buttons = () => {
   const dispatch = useDispatch();

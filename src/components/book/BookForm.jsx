@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
-import { addBookToApi } from '../../redux/books/books';
+import { addBookToApi } from '../../redux/API';
 
 const BookForm = () => {
   const dispatch = useDispatch();

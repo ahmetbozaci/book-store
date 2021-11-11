@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import BookForm from './BookForm';
 import BookList from './BookList';
-import { getBooks } from '../../redux/books/books';
+import { getBooks } from '../../redux/API';
 
 const Books = () => {
   const dispatch = useDispatch();
