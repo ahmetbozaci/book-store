@@ -1,21 +1,32 @@
-/* eslint-disable no-unused-vars */
+/**
+ * /* eslint-disable no-unused-vars
+ *
+ * @format
+ */
+
 /** @format */
 
 import { deleteBook, postBook } from '../API';
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
-const ADD_BOOK_TO_API = 'bookStore/books/ADD_BOOK_TO_API';
+const UPDATE = 'bookStore/books/updateBooks';
+
 const initialState = [];
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_BOOK:
-      return [...state, action.payload];
-    case ADD_BOOK_TO_API:
-      return 'Success';
-    case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload.id);
+    case ADD_BOOK: {
+      const newState = JSON.parse(JSON.stringify(state));
+      newState[action.payload.id] = [action.payload];
+      return newState;
+    }
+    case REMOVE_BOOK: {
+      const { [action.payload.id]: r, ...newState } = state;
+      return newState;
+    }
+    case UPDATE:
+      return action.payload;
     default:
       return state;
   }
@@ -43,9 +54,17 @@ export const removeBookFromApi = (id) => async (dispatch) => {
   dispatch(removeBook(id));
 };
 
-export const getBooks = () => async(dispatch) => {
-  const response = await getBooks();
-  dispatch(response);
+const loadBooks = (apiState) => ({
+  type: UPDATE,
+  payload: apiState,
+});
+
+export const getBooks = () => async (dispatch) => {
+  const response = await fetch(
+    'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/naN2smxjCVu4fr6NtvX5/books',
+  );
+  const data = await response.json();
+  dispatch(loadBooks(data));
 };
 
 export default reducer;
