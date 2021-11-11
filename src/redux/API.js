@@ -15,14 +15,14 @@
 
 const BOOK_STORE_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/naN2smxjCVu4fr6NtvX5/books';
 //! Get data
-const getBooksFromApi = async () => {
+const getBooks = async () => {
   const response = await fetch(BOOK_STORE_URL);
   const data = await response.json();
   return data;
 };
 
 //! Post data
-const addBookToApi = async (book) => {
+const postBook = async (book) => {
   const newBook = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -33,10 +33,9 @@ const addBookToApi = async (book) => {
 };
 
 //! Delete data
-const deleteBookFromApi = async (id) => {
+const deleteBook = async (id) => {
   const URL = `${BOOK_STORE_URL}/${id}`;
-  fetch(URL, { method: 'DELETE' });
-  // setStatus('Delete successful')
+  return fetch(URL, { method: 'DELETE' });
 };
 
-export { getBooksFromApi, addBookToApi, deleteBookFromApi };
+export { getBooks, postBook, deleteBook };

@@ -4,9 +4,9 @@
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { useState, useEffect } from 'react';
-import { addBook, createPostAction } from '../../redux/books/books';
+import { addBook, addBookToApi } from '../../redux/books/books';
 
-import { getBooksFromApi, addBookToApi, deleteBookFromApi } from '../API/API';
+import { getBooks, postBook, deleteBook } from '../../redux/API';
 
 const BookForm = () => {
   const dispatch = useDispatch();
@@ -16,11 +16,6 @@ const BookForm = () => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
 
-  useEffect(async () => {
-    const data = await getBooksFromApi();
-    // console.log(data);
-  });
-
   const addBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
@@ -28,8 +23,14 @@ const BookForm = () => {
       title: state.title,
       category: state.category,
     };
-    dispatch(createPostAction(newBook));
+    dispatch(addBookToApi(newBook));
     setState({ title: '', category: '' });
+
+    // const test = async () => {
+    //   const data = await getBooks();
+    //   console.log(data);
+    // };
+    // test();
   };
 
   return (
