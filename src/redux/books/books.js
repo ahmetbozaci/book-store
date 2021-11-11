@@ -1,6 +1,7 @@
+import { addBookToApi } from '../../components/API/API';
+
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
-
 const initialState = [];
 
 const reducer = (state = initialState, action) => {
@@ -25,5 +26,10 @@ export const removeBook = (id) => ({
     id,
   },
 });
+
+export const createPostAction = (book) => async (dispatch) => {
+  addBookToApi(book);
+  dispatch(addBook(book));
+};
 
 export default reducer;

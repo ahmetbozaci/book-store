@@ -1,4 +1,3 @@
-// naN2smxjCVu4fr6NtvX5
 //! For get app id
 // const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps';
 // useEffect(() => {
@@ -23,19 +22,14 @@ const getBooksFromApi = async () => {
 };
 
 //! Post data
-const addBookToApi = async (title, category) => {
+const addBookToApi = async (book) => {
   const newBook = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      item_id: '31231', // change it
-      title,
-      category,
-    }),
+    body: JSON.stringify(book),
   };
   const response = await fetch(BOOK_STORE_URL, newBook);
-  const data = await response.text();
-  return data;
+  return response;
 };
 
 //! Delete data
