@@ -11,7 +11,7 @@ const BookList = () => {
     <ul>
       {Object.entries(books).map(([key, value]) => (
         <li key={key} id={key}>
-          {value[0].title}
+          {value.map((item) => item.title)}
           <Buttons />
         </li>
       ))}
