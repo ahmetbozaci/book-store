@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
+import './SCSS/Navbar.scss';
 
 const Navbar = () => (
   <nav className="navbar container">

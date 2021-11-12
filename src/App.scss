@@ -1,46 +1,5 @@
-/** @format */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet');
-
-$blue: #0290ff;
-$blue2: #4386bf;
-$black: #4b4b4b;
-$primary-font: 'Montserrat';
-
-
-.navbar {
-  border-bottom: 1.5px solid #e8e8e8;
-  font-family: $primary-font;
-}
-.container {
-  color: $blue;
-  display: flex;
-  align-items: baseline;
-  background-color: #fff;
-  justify-content: space-between;
-  padding: 0 2rem 0 2rem;
-  margin: 0.5rem;
-
-  li {
-    list-style-type: none;
-    a {
-      text-decoration: none;
-    }
-    :visited {
-      color:$black;
-    }
-  } .navbar-brand {
-    color: $blue;
-    font-family: Montserrat;
-    font-size: 1.875rem;
-    font-weight: bold;
-  }
-
-  .navbar-link {
-    font-family: Montserrat;
-    font-size: 0.9rem;
-    padding-left: 1rem;
-  }
-}
-.user-icon {
-  color: $blue;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
