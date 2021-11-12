@@ -1,0 +1,48 @@
+/** @format */
+
+$primary-font: 'Montserrat';
+$secondary-font: 'RobotoSlab';
+$color1: #888888;
+$blue: #0290ff;
+.form-container {
+  font-family: $primary-font;
+  color: $color1;
+  border-top: 1.5px solid #e8e8e8;
+  padding: 0 4rem;
+  margin: 0.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+
+.input-title {
+  height: 2.3rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  padding: 0 10rem 0 0.3rem;
+}
+
+.categories {
+  height: 2.3rem;
+  margin: 0 1rem;
+  padding: 0 3rem 0 0.3rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.button {
+  height: 2.3rem;
+  padding: 0 3rem;
+  border-radius: 3px;
+  background-color: $blue;
+  text-align: center;
+  color: #fff;
+  font-family: $secondary-font;
+  border: none;
+
+}
+
