@@ -1,8 +1,12 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Book Store
-<!--I use react step by step -->
-<!-- ![image](image.gif) -->
+## React application to keep track of books using Redux.
+### This MVP version allows you to:
+- Display a list of books.
+- Add a book.
+- Remove a selected book.
+![image](download.png)
 ## Built With
 
 - Html
