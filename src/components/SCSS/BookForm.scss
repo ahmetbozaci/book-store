@@ -2,8 +2,9 @@
 
 $primary-font: 'Montserrat';
 $secondary-font: 'RobotoSlab';
-$color1: #888888;
+$color1: #888;
 $blue: #0290ff;
+
 .form-container {
   font-family: $primary-font;
   color: $color1;
@@ -43,6 +44,5 @@ h3 {
   color: #fff;
   font-family: $secondary-font;
   border: none;
-
 }
 

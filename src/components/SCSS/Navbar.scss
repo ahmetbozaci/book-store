@@ -1,3 +1,5 @@
+/** @format */
+
 $blue: #0290ff;
 $blue2: #4386bf;
 $black: #4b4b4b;
@@ -7,6 +9,7 @@ $primary-font: 'Montserrat';
   border-bottom: 1.5px solid #e8e8e8;
   font-family: $primary-font;
 }
+
 .container {
   color: $blue;
   display: flex;
@@ -18,25 +21,31 @@ $primary-font: 'Montserrat';
 
   li {
     list-style-type: none;
+
     a {
       text-decoration: none;
     }
+
     :visited {
-      color:$black;
+      color: $black;
     }
-  } .navbar-brand {
+  }
+
+  .navbar-brand {
     color: $blue;
-    font-family: Montserrat;
+    font-family: $primary-font;
     font-size: 1.875rem;
     font-weight: bold;
   }
 
   .navbar-link {
-    font-family: Montserrat;
+    font-family: $primary-font;
     font-size: 0.9rem;
     padding-left: 1rem;
   }
 }
+
 .user-icon {
   color: $blue;
 }
+

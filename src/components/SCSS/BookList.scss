@@ -2,20 +2,19 @@
 
 $primary-font: 'Montserrat';
 $secondary-font: 'RobotoSlab';
-$color1: #888888;
+$color1: #888;
 $blue: #0290ff;
 
 .book-list {
   padding: 0 1.7rem;
   margin: 1.5rem;
   font-family: $secondary-font;
-  
 }
 
 .book-item {
   border: solid 1px #e8e8e8;
   margin: 1rem;
-  padding: 1rem 2rem ;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
 }
@@ -78,7 +77,6 @@ $blue: #0290ff;
   width: 4.25rem;
   height: 2.438rem;
   margin: 0.063rem 5.75rem 0 0.688rem;
-  font-family: Montserrat;
   font-size: 2rem;
   font-weight: normal;
   font-stretch: normal;
@@ -93,7 +91,6 @@ $blue: #0290ff;
   height: 1.125rem;
   margin: 0.438rem 4.938rem 0.75rem 0.75rem;
   opacity: 0.5;
-  font-family: Montserrat;
   font-size: 0.875rem;
   font-weight: normal;
   font-stretch: normal;
@@ -108,7 +105,6 @@ $blue: #0290ff;
   height: 1.125rem;
   margin: 0.063rem 3.625rem 0 3.688rem;
   opacity: 0.5;
-  font-family: RobotoSlab;
   font-size: 0.813rem;
   font-weight: 300;
   font-stretch: normal;
@@ -118,11 +114,10 @@ $blue: #0290ff;
   color: #121212;
 }
 
-.chapter{
+.chapter {
   width: 4.688rem;
   height: 1.313rem;
   margin: 0.438rem 6.813rem 0.25rem 3.688rem;
-  font-family: RobotoSlab;
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
@@ -133,12 +128,11 @@ $blue: #0290ff;
 }
 
 .icon {
- width: 100px;
- border: 3px solid  #4386bf;
- border-radius: 50%;
-
+  width: 100px;
+  border: 3px solid #4386bf;
+  border-radius: 50%;
 }
 
 .percentage-section {
-    align-self: center;
+  align-self: center;
 }
