@@ -11,7 +11,6 @@ const BookForm = () => {
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
-
   const addBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
