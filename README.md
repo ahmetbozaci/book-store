@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Book Store
-<!--I use react step by step -->
+> React application to keep track of books using Redux.
 <!-- ![image](image.gif) -->
 ## Built With
 
